@@ -1,13 +1,18 @@
 package com.mycompany.property_management.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties( ignoreUnknown = true)
 public class UserDto {
-
-    private String name;
-    private String email;
-
-    // Getters and Setters
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    private Long id;
+    private String ownerName;
+    private String ownerEmail;
+    private String phone;
+    private String password;
 }

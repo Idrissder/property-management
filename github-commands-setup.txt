@@ -1,4 +1,3 @@
-First Time Git & GitHub Setup
 ==============================
 1. git init
 2. git add .
@@ -12,12 +11,3 @@ Next Time Onwards
 2. git add .
 3. git commit -m "some message"
 4. git push
-
-
-
-git branch -r
-  origin/HEAD -> origin/master
-  origin/acc
-  origin/dev
-  origin/master
-  origin/test
