@@ -4,7 +4,6 @@ First Time Git & GitHub Setup
 2. git add .
 3. git commit -m "any message"
 4. git remote add origin https://github.com/Idrissder/property-management.git
-5. git remote set-url origin https://Idrissder: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@github.com/Idrissder/property-management.git
 6. git push --set-upstream origin master
 
 Next Time Onwards
