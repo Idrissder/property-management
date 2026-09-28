@@ -12,4 +12,5 @@ Next Time Onwards
 3. git commit -m "some message"
 4. git push
 
-token
+5.token
+After recovery 
