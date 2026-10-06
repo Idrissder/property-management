@@ -29,7 +29,7 @@ public class PropertyServiceImpl implements PropertyService {
 
     @Override
     public PropertyDto saveProperty(PropertyDto propertyDto) {
-        System.out.println("@ service layer HERE "+ propertyDto.getId());
+//        System.out.println("@ service layer HERE "+ propertyDto.getId());
 
         PropertyEntity pe = propertyConverter.convertDTOtoEntity(propertyDto);
         pe =propertyRepository.save(pe);
@@ -42,6 +42,7 @@ public class PropertyServiceImpl implements PropertyService {
     public List<PropertyDto> getAllProperties() {
 
         System.out.println("Inside Service "+ dummy);
+        System.out.println("Inside Service "+ dbUrl);
         List<PropertyEntity> listOfProps = (List<PropertyEntity>) propertyRepository.findAll();
         List<PropertyDto> propList = new ArrayList<>();
         for(PropertyEntity pe : listOfProps){
@@ -62,8 +63,8 @@ public class PropertyServiceImpl implements PropertyService {
             PropertyEntity pe = optEn.get();//data from database
             pe.setTitle(propertyDto.getTitle());
             pe.setAddress(propertyDto.getAddress());
-            pe.setOwnerEmail(propertyDto.getOwnerEmail());
-            pe.setOwnerName(propertyDto.getOwnerName());
+//            pe.setOwnerEmail(propertyDto.getOwnerEmail());
+//            pe.setOwnerName(propertyDto.getOwnerName());
             pe.setPrice(propertyDto.getPrice());
             pe.setDescription(propertyDto.getDescription());
             dto = propertyConverter.convertEntitytoDTO(pe);
